@@ -1,10 +1,8 @@
-@import 'config';
-@import 'menu';
-
+@import "config";
+@import "menu";
 
 * {
   box-sizing: border-box;
-
 }
 
 body {
@@ -13,11 +11,11 @@ body {
   color: $tertiary-color;
   height: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
 
-// Headings 
+// Headings
 h1,
 h2,
 h3 {
