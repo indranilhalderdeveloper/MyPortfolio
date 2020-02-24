@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css"
+    integrity="sha256-a2tobsqlbgLsWs7ZVUGgP5IvWZsx8bTNQpzsqCSm5mk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./sass/main.css">
+  <link rel="stylesheet" href="./sass/style.css">
+  <title>Contact Me</title>
+</head>
+
+<body>
+  <header>
+    <div class="menu-btn">
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+    </div>
+
+    <nav class="menu">
+      <div class="menu-branding">
+        <div class="portrait"></div>
+      </div>
+
+      <ul class="menu-nav">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About Me</a>
+        </li>
+        <li class="nav-item">
+          <a href="work.html" class="nav-link">My Work</a>
+        </li>
+        <li class="nav-item current">
+          <a href="#" class="nav-link">Connect With Me</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <h1 class="brand"><span>Indranil</span> Halder</h1>
+    <div class="wrapper animated bounceInLeft">
+      <div class="company-info">
+        <h3>Connect With Me</h3>
+        <ul>
+          <li><i class="fa fa-road"></i> Balurghat, Dakshin Dinajur, West Bengal.</li>
+          <li><i class="fa fa-phone"></i> 9647552521</li>
+          <li><i class="fa fa-envelope"></i> developerindranil@gmail.com</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h3>Contact Me</h3>
+        <form action="POST" data-netlify="true">
+          <p class="full">
+            <label>NAME :</label>
+            <input type="text" name="name" placeholder="Your Name" />
+          </p>
+          <p class="full">
+            <label>COMPANY :</label>
+            <input type="text" name="company" placeholder="Company Or Institute Name" />
+          </p>
+          <p class="full">
+            <label>EMAIL ADDRESS :</label>
+            <input type="email" name="email" placeholder="Your Email" />
+          </p>
+          <p class="full">
+            <label>PHONE NUMBER :</label>
+            <input type="text" name="phone" placeholder="Your Phone Number" />
+          </p>
+          <p class="full">
+            <label>MESSAGE :</label>
+            <textarea name="message" rows="5" placeholder="Your Message For Me"></textarea>
+          </p>
+          <p class="full">
+            <div data-netlify-recaptcha="true"></div>
+          </p>
+          <div data-netlify-recaptcha="true"></div>
+          <p class="full">
+            <button>SUBMIT</button>
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>

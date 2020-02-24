@@ -73,7 +73,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #ccd4d7;
+  background: #ababab;
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
@@ -87,7 +87,7 @@
 }
 
 .menu-branding {
-  background: #DAE0E2;
+  background: #b8b8b8;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
   -webkit-transition: all 0.5s ease-out;
@@ -102,7 +102,7 @@
 .menu-branding .portrait {
   width: 250px;
   height: 250px;
-  background: url(../img/computer-cup-desk-drink-434337.jpg);
+  background: url(../img/portrait.jpg);
   border-radius: 50%;
   border: solid 5px #0A79DF;
 }
@@ -160,6 +160,225 @@
           transition-delay: 0.4s;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #b8b8b8;
+  color: #000000;
+  height: 100%;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+}
+
+body#bg-img {
+  background: url(../img/coppressdesk.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+body#bg-img:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(184, 184, 184, 0.6);
+  z-index: -1;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+h1.sm-heading,
+h2.sm-heading,
+h3.sm-heading {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(192, 192, 192, 0.5);
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+.text-secondary {
+  color: #0A79DF;
+}
+
+main {
+  padding: 4rem;
+  min-height: calc(100vh - 60px);
+}
+
+main .icons {
+  margin-top: 1rem;
+}
+
+main .icons a {
+  padding: 0.5rem;
+  color: #000000;
+}
+
+main .icons a:hover {
+  color: #0A79DF;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+main#home {
+  overflow: hidden;
+}
+
+main#home h1 {
+  margin-top: 20vh;
+}
+
+.about-info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+      grid-template-areas: "bioimage bio bio" "job1 job2 job3";
+  -ms-grid-columns: reperat(3, 1fr);
+      grid-template-columns: reperat(3, 1fr);
+}
+
+.about-info .bio-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bioimage;
+  margin: auto;
+  border-radius: 50%;
+  border: #0A79DF 5px solid;
+  width: 200px;
+  height: 200px;
+}
+
+.about-info .bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.about-info .job-1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: job1;
+}
+
+.about-info .job-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: job2;
+}
+
+.about-info .job-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: job3;
+}
+
+.about-info .job {
+  background: #c5c5c5;
+  padding: 1rem;
+  border-bottom: #0A79DF 5px solid;
+  border-radius: 10px;
+}
+
+.projects {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  margin: 20px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.projects img {
+  width: 100%;
+  border: 3px #ffffff solid;
+  border-radius: 5px;
+  margin-bottom: 0.4rem;
+}
+
+.projects img:hover {
+  opacity: 0.9;
+  border-color: #0A79DF;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.btn, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  border-radius: 5px;
+}
+
+.btn-light {
+  background-color: #ebebeb;
+  width: 100%;
+  text-align: center;
+}
+
+.btn-light:hover {
+  background: #0A79DF;
+  color: #ffffff;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #9f9f9f;
+  color: #000000;
+  height: 60px;
+}
+
+@media screen and (min-width: 1171px) {
+  .projects {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .projects {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 @media screen and (max-width: 768px) {
   main {
     -webkit-box-align: center;
@@ -198,9 +417,19 @@
             transform: translate3d(100%, 0, 0);
   }
   .menu-branding .portrait {
-    background: url(../img/coppressdesk.jpg);
-    width: 120px;
-    height: 120px;
+    background: url(../img/portrait-small.jpg);
+    width: 150px;
+    height: 150px;
+  }
+  .about-info {
+    margin: 20px;
+        grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -208,100 +437,9 @@
   main#home h1 {
     margin-top: 10vh;
   }
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background: #DAE0E2;
-  color: #000000;
-  height: 100%;
-  margin: 0;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.5;
-}
-
-body#bg-img {
-  background: url(../img/coppressdesk.jpg);
-  background-attachment: fixed;
-  background-size: cover;
-}
-
-body#bg-img:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(218, 224, 226, 0.6);
-  z-index: -1;
-}
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-weight: 400;
-}
-
-h1.lg-heading,
-h2.lg-heading,
-h3.lg-heading {
-  font-size: 6rem;
-  font-weight: bold;
-}
-
-h1.sm-heading,
-h2.sm-heading,
-h3.sm-heading {
-  margin-bottom: 2rem;
-  padding: 0.2rem 1rem;
-  background: rgba(227, 231, 233, 0.5);
-}
-
-a {
-  color: #000000;
-  text-decoration: none;
-}
-
-header {
-  position: fixed;
-  z-index: 2;
-  width: 100%;
-}
-
-.text-secondary {
-  color: #0A79DF;
-}
-
-main {
-  padding: 4rem;
-  height: 100%;
-}
-
-main .icons {
-  margin-top: 1rem;
-}
-
-main .icons a {
-  padding: 0.5rem;
-}
-
-main .icons a:hover {
-  color: #0A79DF;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
-}
-
-main#home {
-  overflow: hidden;
-}
-
-main#home h1 {
-  margin-top: 20vh;
+  .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 /*# sourceMappingURL=main.css.map */

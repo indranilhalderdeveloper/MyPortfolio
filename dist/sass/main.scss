@@ -1,6 +1,6 @@
 @import "config";
 @import "menu";
-@import "mobile";
+
 
 * {
   box-sizing: border-box;
@@ -9,7 +9,7 @@
 body {
   @include background();
   background: $primary-color;
-  color: $tertiary-color;
+  color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
   font-family: "Montserrat", sans-serif;
@@ -36,7 +36,7 @@ h3 {
 }
 
 a {
-  color: $tertiary-color;
+  color: #000000;
   text-decoration: none;
 }
 
@@ -52,13 +52,16 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  //height: 100%;
+  min-height: calc(100vh - 60px);
 
   .icons {
     margin-top: 1rem;
 
+
     a {
       padding: 0.5rem;
+      color: set-text-color($primary-color);
 
       &:hover {
         color: $secondary-color;
@@ -75,3 +78,107 @@ main {
     }
   }
 }
+
+// About page
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-areas:
+    "bioimage bio bio"
+    "job1 job2 job3";
+  grid-template-columns: reperat(3, 1fr);
+
+  .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: $secondary-color 5px solid;
+    width: 200px;
+    height: 200px;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job1;
+  }
+
+  .job-2 {
+    grid-area: job2;
+  }
+
+  .job-3 {
+    grid-area: job3;
+  }
+
+  .job {
+    background: lighten($color: $primary-color, $amount: 5);
+    padding: 1rem;
+    border-bottom: $secondary-color 5px solid;
+    border-radius: 10px;
+  }
+}
+
+// Work page
+
+.projects {
+  display: grid;
+  grid-gap: 1rem;
+  margin: 20px;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    width: 100%;
+    border: 3px #ffffff solid;
+    border-radius: 5px;
+    margin-bottom: 0.4rem;
+
+    &:hover {
+      opacity: 0.9;
+      border-color: $secondary-color;
+      transform: scale(1.05);
+      @include easeOut;
+    }
+  }
+}
+
+// Button styles 
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+  border-radius: 5px;
+
+
+}
+
+.btn-light {
+  @extend .btn;
+  background-color: lighten($color: $primary-color, $amount: 20);
+  width: 100%;
+  text-align: center;
+
+  &:hover {
+    background: $secondary-color;
+    color: #ffffff;
+    transform: scale(1.05);
+    @include easeOut;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($color: $primary-color, $amount: 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+}
+
+
+@import "mobile";

@@ -12,7 +12,7 @@
         height: 4px;
         border-radius: 5px;
         margin: 0 0 5px 0;
-        background: $tertiary-color;
+        background: set-text-color($primary-color);
         @include easeOut;
     }
 
@@ -96,7 +96,7 @@
         .portrait {
             width: 250px;
             height: 250px;
-            background: url(../img/computer-cup-desk-drink-434337.jpg);
+            background: url(../img/portrait.jpg);
             border-radius: 50%;
             border: solid 5px $secondary-color;
         }
@@ -123,7 +123,7 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: bolder;
-        color: $tertiary-color;
+        color: set-text-color($primary-color);
         text-decoration: none;
         @include easeOut;
 
